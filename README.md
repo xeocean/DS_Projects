@@ -1,4 +1,4 @@
-# ML Projects
+# DS Projects
 
 ### Описание проектов
 
