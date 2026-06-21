@@ -1,0 +1,14 @@
+{
+    "num_books": 393561,
+    "num_music": 103144,
+    "num_sport": 1,
+    "max_out_degree": 5,
+    "max_in_degree": 549,
+    "max_in_degree_title": "Laura",
+    "reciprocity": 0.2722576,
+    "most_often_in_triangles_title": "The TEMPEST",
+    "largest_pagerank_title": "Good to Great: Why Some Companies Make the Leap... and Others Don't",
+    "num_bundles": 518982,
+    "num_music_bundles": 97306,
+    "num_collections": 1187
+}
