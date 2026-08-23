@@ -1,7 +1,0 @@
-names:
-  0: yolk
-  1: egg
-  2: parsley
-path: ./data/YOLO/
-train: train.txt
-val: train.txt
