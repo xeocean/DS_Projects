@@ -2,35 +2,35 @@
 
 ## Fried Eggs Quality Assessment
 
-_Summary: this project is an introduction to Deep Learning and computer vision (CNN, instance segmentation, object detection, data labeling)._
+*Summary: this project is an introduction to Deep Learning and computer vision (CNN, instance segmentation, object detection, data labeling).*
 
 ## Contents
 
-1. [Chapter I](#chapter-i) \
-   1.1. [Preamble](#preamble)
-2. [Chapter II](#chapter-ii) \
-   2.1. [Introduction](#introduction)
-3. [Chapter III](#chapter-iii) \
-   3.1. [Goals](#goals)
-4. [Chapter IV](#chapter-iv) \
-   4.1. [General instructions](#general-instructions)
-5. [Chapter V](#chapter-v) \
-   5.1. [Mandatory part](#mandatory-part)
-6. [Chapter VI](#chapter-vi) \
-   6.1. [Bonus part](#bonus-part)
-7. [Chapter VI](#chapter-vi) \
-   7.1. [Submission and peer-correction](#submission-and-peer-correction)
+1. [Chapter I](#chapter-i)   
+1.1. [Preamble](#preamble)
+2. [Chapter II](#chapter-ii)   
+2.1. [Introduction](#introduction)
+3. [Chapter III](#chapter-iii)   
+3.1. [Goals](#goals)
+4. [Chapter IV](#chapter-iv)   
+4.1. [General instructions](#general-instructions)
+5. [Chapter V](#chapter-v)   
+5.1. [Mandatory part](#mandatory-part)
+6. [Chapter VI](#chapter-vi)   
+6.1. [Bonus part](#bonus-part)
+7. [Chapter VI](#chapter-vi)   
+7.1. [Submission and peer-correction](#submission-and-peer-correction)
 
 ## Chapter I
 
 How to learn at “School 21”:
 
-- Here, you’ll find a unique learning experience with a lot of freedom. You’re given a task and left to find your own way to solve it, using whatever resources work best for you — whether that’s the Internet or AI tools like GigaChat. Just be mindful of information quality: verify, think critically, analyze, and compare.
-- Peer-to-peer (P2P) learning is the exchange of knowledge and experience with peers, where everyone acts as both mentor and student. This approach allows you to gain a deeper understanding of the material by learning from one another.
-- Feel free to ask for help: around you are peers who are also navigating this path for the first time. Share your own experience and ideas with others.  Join Rocket.Chat to stay updated with the latest community announcements. 
-- Your learning is meaningless if you just copy someone else’s solutions. When receiving help from others, always make sure you fully understand the “why”, “how”, and “purpose” behind the solution. Don’t be afraid to make mistakes. 
-- Does the task seem impossible? Take a break, get some fresh air and clear your mind — this has helped many people. Maybe after that, the solution will come to you naturally.
-- The learning process is just as important as the result. It’s not just about completing the task — it’s about understanding HOW to solve it. 
+* Here, you’ll find a unique learning experience with a lot of freedom. You’re given a task and left to find your own way to solve it, using whatever resources work best for you — whether that’s the Internet or AI tools like GigaChat. Just be mindful of information quality: verify, think critically, analyze, and compare.
+* Peer-to-peer (P2P) learning is the exchange of knowledge and experience with peers, where everyone acts as both mentor and student. This approach allows you to gain a deeper understanding of the material by learning from one another.
+* Feel free to ask for help: around you are peers who are also navigating this path for the first time. Share your own experience and ideas with others.  Join Rocket.Chat to stay updated with the latest community announcements.
+* Your learning is meaningless if you just copy someone else’s solutions. When receiving help from others, always make sure you fully understand the “why”, “how”, and “purpose” behind the solution. Don’t be afraid to make mistakes.
+* Does the task seem impossible? Take a break, get some fresh air and clear your mind — this has helped many people. Maybe after that, the solution will come to you naturally.
+* The learning process is just as important as the result. It’s not just about completing the task — it’s about understanding HOW to solve it.
 
 ### Preamble
 
@@ -58,11 +58,11 @@ In **image classification**, we try to answer the question, "Does this object ex
 
 The central element of CNNs is the **kernel**.
 
-![0](./misc/images/0.png)
+!\[0](./misc/images/0.png)
 
 It "looks" at the image from its own point of view (i.e., it considers the weights inside) by sliding over the image and performing simple calculations, such as the element-wise product of matrices and the sum of the results. See the example in the picture above. This process creates a feature map. This feature map can then go to the next convolutional layer or undergo other processing, such as pooling. The purpose of pooling is to reduce the size of the image. This allows the network to work with higher-level features and increases training speed. There are different types of pooling. Max pooling, for example, takes the maximum element in the receptive field frame. Average pooling takes the average of those elements.
 
-![1](./misc/images/1.png)
+!\[1](./misc/images/1.png)
 
 The final layers of a CNN are **fully connected layers (FCN)** from a classical neural network architecture with which you are already familiar. The output from the last convolutional layer is flattened and sent to a sequence of FCN. The output of these layers is a layer with a number of neurons equal to the number of classes in your classification task.
 
@@ -93,6 +93,7 @@ The goal of this project is to introduce you to Deep Learning and Computer Visio
 In this project, you will analyze photos of restaurant-made fried eggs to determine whether they are fit for consumption. There can be various issues in the cooking process, such as too few or too many yolks, some yolks being broken, or overcooking.
 
 Here are the tasks that you need to do:
+
 1. data labeling with instance segmentation,
 2. data preprocessing,
 3. fried eggs classification.
@@ -101,15 +102,16 @@ Here are the tasks that you need to do:
 
 You will work with the [dataset](./datasets/P07.%20Fried%20eggs.zip) of fried eggs. It contains 199 unlabeled images of fried eggs (train) and 65 images from the hidden test sample for which we know classes.
 
-![2](./misc/images/2.png)
+!\[2](./misc/images/2.png)
 
 The classes are as follows:
-- 0 — good fried eggs (three yolks, parsley in the center, well-cooked and looking like one whole piece, not several separate pieces);
-- 1 — overcooked or overturned fried eggs;
-- 2 — fried eggs with two yolks;
-- 3 — fried eggs with a broken yolk;
-- 4 — fried eggs with four yolks;
-- 5 — fried eggs with the ingredients in the wrong position, missing ingredients, or incorrect placement or composition.
+
+* 0 — good fried eggs (three yolks, parsley in the center, well-cooked and looking like one whole piece, not several separate pieces);
+* 1 — overcooked or overturned fried eggs;
+* 2 — fried eggs with two yolks;
+* 3 — fried eggs with a broken yolk;
+* 4 — fried eggs with four yolks;
+* 5 — fried eggs with the ingredients in the wrong position, missing ingredients, or incorrect placement or composition.
 
 #### C. Implementation
 
@@ -120,7 +122,7 @@ You can work in [Google Colab](https://colab.research.google.com/) or Jupyter No
 1. Using the six classes described above, label the images from the train sample.
 2. To solve the project with good quality, you must solve the instance segmentation task. To do so, you must annotate your images with instances of different objects to show where a piece of bacon, a yolk, or a piece of parsley is located. Convert the inference annotations to polygon masks (XMLs).
 
-![3](./misc/images/3.png)
+!\[3](./misc/images/3.png)
 
 3. Automate this process using an active learning approach to train a neural net that learns from you which objects are in the image.
 
@@ -129,11 +131,11 @@ You can work in [Google Colab](https://colab.research.google.com/) or Jupyter No
 1. Resize the images to 1024x768.
 2. Learn to crop images so that only a plate with fried eggs goes to a CNN.
 
-![4](./misc/images/4.png)
+!\[4](./misc/images/4.png)
 
 3. Extract masks of the ingredients. Use them as an input to CNN.
 
-![5](./misc/images/5.png)
+!\[5](./misc/images/5.png)
 
 **Classification**
 
@@ -159,8 +161,11 @@ Submit your work to your Git repository as usual. Only work submitted to your re
 
 Here are the points that your peer corrector will have to check:
 
-- If images are labeled using classes and instance segmentation.
-- If an active learning approach was used to automate data labeling.
-- If the images were resized or cropped.
-- If masks were extracted from segmentation.
-- Whether the required logloss was achieved in the classification.
+* If images are labeled using classes and instance segmentation.
+* If an active learning approach was used to automate data labeling.
+* If the images were resized or cropped.
+* If masks were extracted from segmentation.
+* Whether the required logloss was achieved in the classification.
+
+
+
